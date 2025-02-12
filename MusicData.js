@@ -1,20 +1,39 @@
-//In this file you will declare three classes (object templates)
+// MusicData.js
 
-
-//1. Declare a class called Song, it's constructor should take three parameters: title, artist, album
-
-
-
-//2. Declare a class called Musician, it's constructor should take three parameters: name, instrument, genre
-
-
-
-//3. Declare a class called Playlist, it's constructor should take four parameters: name, song1, song2, song3, song4
-//4. this class should also define a method called getInfo() that prints text to the console saying
-//  The playlist (whatever name you gave it) has the following songs:
-//         (Song1 name) by (Song1 Artist Name),
-//         (Song2 name) by (Song2 Artist Name),
-//         (Song3 name) by (Song3 Artist Name),
+class Song {
+    constructor(title, artist, album) {
+      this.title = title;
+      this.artist = artist;
+      this.album = album;
+    }
+  }
+  
+  class Musician {
+    constructor(name, instrument, genre) {
+      this.name = name;
+      this.instrument = instrument;
+      this.genre = genre;
+    }
+  }
+  
+  class Playlist {
+    constructor(name, song1, song2, song3) {
+      this.name = name;
+      this.songs = [song1, song2, song3];
+    }
+  
+    getInfo() {
+      console.log(`Playlist: ${this.name}`);
+      this.songs.forEach((song, index) => {
+        console.log(`${index + 1}. ${song.title} by ${song.artist} from the album ${song.album}`);
+      });
+    }
+  }
+  
+  // Export all three classes
+  export { Song, Musician, Playlist };
+  
+  
 
 
 

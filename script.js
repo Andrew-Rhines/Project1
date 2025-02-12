@@ -1,42 +1,20 @@
-// 1. Import the all three objects (Song, Musician, Playlist) that you created in the MusicData.js module file
+
+import { Song, Musician, Playlist } from './MusicData.js';
+
+const musician1 = new Musician("Freddie Mercury", "Vocals", "Rock");
+const musician2 = new Musician("Jimi Hendrix", "Guitar", "Rock");
+const musician3 = new Musician("Eric Claptin", "Guitar", "Blues");
+
+const song1 = new Song("Bohemian Rhapsody", musician1.name, "A Night at the Opera");
+const song2 = new Song("Purple Haze", musician2.name, "Are You Experienced");
+const song3 = new Song("Layla", musician3.name, "Timepieces");
 
 
-// 2. declare a new constant and assign to it a new musician object to describe the musician for the first song.
+const myPlaylist = new Playlist("My Favorite Songs", song1, song2, song3);
+
+myPlaylist.getInfo();
 
 
-
-// 3. declare a new constant and assign to it a new musician object to describe the musician for the second song.
-
-
-
-
-// 4. declare a new constant and assign to it a new musician object to describe the musician for the third song.
-
-
-// 5. declare a new constant and assign to it a new Song object to describe the first song
-// (make sure to use the Musician object from step 2 in creating this Song object
-
-
-
-// 6. declare a new constant and assign to it a new Song object to describe the second song
-// (make sure to use the Musician object from step 3 in creating this Song object
-
-
-// 7. declare a new constant and assign to it a new Song object to describe the third song
-// (make sure to use the Musician object from step 4 in creating this Song object
-
-
-// 8. declare a new constant called myPlaylist and assign to it a new Playlist object and make sure to use the three Song objects
-//from steps 5, 6, & 7 when creating it.
-//It must be called myPlaylist
-//It must be called myPlaylist
-
-
-//9. call the .getInfo() method on myPlaylist
-
-
-//DO NOT EDIT BELOW THIS LINE
-//the code below here will insert the Playlist data into the webpage.
 const bodyHTML = document.querySelector("body");
 
 bodyHTML.innerHTML += `
